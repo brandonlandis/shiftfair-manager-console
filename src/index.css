@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: #f8fafc;
+  --surface-2: #ffffff;
+  --text-main: #0f2942;
+  --text-soft: #475569;
+  --teal-primary: #0d9488;
+  --approve-green: #16a34a;
+  --warning-amber: #d97706;
+  --danger-red: #dc2626;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text-main);
+  background: radial-gradient(circle at 20% -10%, #ffffff 0%, #f8fafc 45%, #eef2f7 100%);
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.card {
+  @apply rounded-lg border border-slate-200 bg-white shadow-soft;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-semibold transition;
+}
+
+.btn-primary {
+  @apply btn bg-teal text-white hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-approve {
+  @apply btn text-white hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50;
+  background-color: var(--approve-green);
+}
+
+.btn-ghost {
+  @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+}
+
+.input {
+  @apply mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none ring-0 transition focus:border-teal;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full px-2 py-1 text-xs font-medium;
+}
